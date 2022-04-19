@@ -4,7 +4,7 @@ import Product from '../typeorm/entities/Product';
 import { ProductRepository } from '../typeorm/repositories/ProductRepository';
 
 interface IRequest {
-  id: number;
+  id: string;
   name: string;
   price: Double;
   quantity: number;
