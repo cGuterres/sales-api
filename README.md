@@ -1,4 +1,4 @@
-# sales-api
+# SalesApi
 API em Node js
 
 Libraries used:
