@@ -1,4 +1,4 @@
-import ApiError from '@shared/http/errors/ApiError';
+import ApiError from '@shared/errors/ApiError';
 import { Double, getCustomRepository } from 'typeorm';
 import Product from '../typeorm/entities/Product';
 import { ProductRepository } from '../typeorm/repositories/ProductRepository';

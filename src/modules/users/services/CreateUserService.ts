@@ -1,4 +1,5 @@
-import ApiError from '@shared/http/errors/ApiError';
+import ApiError from '@shared/errors/ApiError';
+import { hash } from 'bcryptjs';
 import { getCustomRepository } from 'typeorm';
 import User from '../typeorm/entities/User';
 import UserRepository from '../typeorm/repositories/UserRepository';
@@ -19,10 +20,12 @@ export default class CreateUserService {
       throw new ApiError('Email address already used');
     }
 
+    const hashPassword = await hash(password, 8);
+
     const user = userRepository.create({
       name,
       email,
-      password,
+      password: hashPassword,
     });
 
     await userRepository.save(user);
