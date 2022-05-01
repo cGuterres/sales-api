@@ -1,4 +1,5 @@
 # SalesApi
+
 API em Node js
 
 Libraries used:
@@ -29,6 +30,10 @@ npm i express-async-errors
 
 Fake emails
 npm install nodemailer
+npm install -D @types/nodemailer
 
 Multer - to manipulate files
 npm i multer
+
+Template html
+npm install handlebars
